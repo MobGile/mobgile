@@ -3,102 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akun Gmail Premium</title>
-  <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #f8f9fa; 
-      margin: 0; 
-      padding: 15px; 
-      text-align: center; 
-    }
-    h1 { color: #202124; margin-bottom: 8px; }
-    p.subtitle { color: #5f6368; margin-bottom: 25px; font-size: 15px; }
-    .card { 
-      background: white; 
-      margin: 15px auto; 
-      padding: 20px 18px; 
-      border-radius: 12px; 
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
-      max-width: 420px; 
-      text-align: left; 
-    }
-    .logo { 
-      display: block; 
-      margin: 0 auto 12px auto; 
-      width: 80px; 
-      height: auto; 
-    }
-    .card h2 { margin: 0 0 8px 0; font-size: 22px; text-align: center; }
-    .price { 
-      font-size: 26px; 
-      font-weight: bold; 
-      color: #1a73e8; 
-      margin: 8px 0 15px 0; 
-      text-align: center; 
-    }
-    ul { padding-left: 4px; margin: 12px 0 18px 0; }
-    li { margin: 9px 0; list-style: none; font-size: 15px; }
-    .button { 
-      background: #6b46c1; 
-      color: white; 
-      padding: 15px; 
-      border: none; 
-      border-radius: 8px; 
-      font-size: 16px; 
-      width: 100%; 
-      margin-top: 10px; 
-    }
-  </style>
+  <title>TokoArs - Akun Gmail Premium</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Akun Gmail Premium</h1>
-  <p class="subtitle">Stok Unlimited • Garansi 24 Jam</p>
+  <p class="subtitle">Stok Unlimited • Proses Otomatis • Garansi Terjamin</p>
 
-  <!-- Gmail Fresh -->
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Logo" class="logo">
-    <h2>Gmail Fresh</h2>
-    <div class="price">Rp 3.700</div>
-    <ul>
-      <li>✔ Domain @gmail.com</li>
-      <li>✔ Buatan Manual (Manusia)</li>
-      <li>✔ Tanpa Root / Setbb</li>
-      <li>✔ Password Sama Semua</li>
-      <li>✔ Garansi 24 Jam</li>
-    </ul>
-    <button class="button" onclick="window.location.href='https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20mau%20beli%20Gmail%20Fresh'">Beli Sekarang</button>
+  <div class="products">
+    <!-- Gmail Fresh -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="logo">
+      <div class="product-name">Gmail Fresh</div>
+      <div class="price">Rp 3.700</div>
+      <div class="banner">🔥 STOK UNLIMITED! BULK ORDER DISKON</div>
+      
+      <div class="quantity">
+        <button class="qty-btn" onclick="changeQty(1, -1)">–</button>
+        <span class="qty-value" id="qty1">1</span>
+        <button class="qty-btn" onclick="changeQty(1, 1)">+</button>
+      </div>
+
+      <div class="features">
+        <li>✔ Domain @gmail.com</li>
+        <li>✔ Buatan Manual (Manusia)</li>
+        <li>✔ Tanpa Root / Setbb</li>
+        <li>✔ Password Sama Semua</li>
+        <li>✔ Garansi 24 Jam</li>
+      </div>
+      <button class="button" onclick="buyNow(1)">🛒 Beli Sekarang</button>
+    </div>
+
+    <!-- YouTube -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="logo">
+      <div class="product-name">Gmail Trial YouTube</div>
+      <div class="price">Rp 5.000</div>
+      
+      <div class="quantity">
+        <button class="qty-btn" onclick="changeQty(2, -1)">–</button>
+        <span class="qty-value" id="qty2">1</span>
+        <button class="qty-btn" onclick="changeQty(2, 1)">+</button>
+      </div>
+
+      <div class="features">
+        <li>✔ Domain @gmail.com</li>
+        <li>✔ Buatan Manual (Manusia)</li>
+        <li>✔ Tanpa Root / Setbb</li>
+        <li>✔ Password Sama Semua</li>
+        <li>✔ Garansi 24 Jam</li>
+      </div>
+      <button class="button" onclick="buyNow(2)">🛒 Beli Sekarang</button>
+    </div>
+
+    <!-- Gemini -->
+    <div class="card wide">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg" alt="Gemini" class="logo">
+      <div class="product-name">Gmail Trial Gemini</div>
+      <div class="price">Rp 6.000</div>
+      
+      <div class="quantity">
+        <button class="qty-btn" onclick="changeQty(3, -1)">–</button>
+        <span class="qty-value" id="qty3">1</span>
+        <button class="qty-btn" onclick="changeQty(3, 1)">+</button>
+      </div>
+
+      <div class="features">
+        <li>✔ Domain @gmail.com</li>
+        <li>✔ Buatan Manual (Manusia)</li>
+        <li>✔ Tanpa Root / Setbb</li>
+        <li>✔ Password Sama Semua</li>
+        <li>✔ Garansi 24 Jam</li>
+      </div>
+      <button class="button" onclick="buyNow(3)">🛒 Beli Sekarang</button>
+    </div>
   </div>
 
-  <!-- YouTube Trial -->
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Logo" class="logo">
-    <h2>YouTube</h2>
-    <div class="price">Rp 5.000</div>
-    <ul>
-      <li>✔ Domain @gmail.com</li>
-      <li>✔ Buatan Manual (Manusia)</li>
-      <li>✔ Tanpa Root / Setbb</li>
-      <li>✔ Password Sama Semua</li>
-      <li>✔ Garansi 24 Jam</li>
-    </ul>
-    <button class="button" onclick="window.location.href='https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20mau%20beli%20Gmail%20Trial%20YouTube'">Beli Sekarang</button>
-  </div>
-
-  <!-- Gemini Trial -->
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Google_Gemini_logo_2025.svg" alt="Gemini Logo" class="logo">
-    <h2>Gemini</h2>
-    <div class="price">Rp 6.000</div>
-    <ul>
-      <li>✔ Domain @gmail.com</li>
-      <li>✔ Buatan Manual (Manusia)</li>
-      <li>✔ Tanpa Root / Setbb</li>
-      <li>✔ Password Sama Semua</li>
-      <li>✔ Garansi 24 Jam</li>
-    </ul>
-    <button class="button" onclick="window.location.href='https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20mau%20beli%20Gmail%20Trial%20Gemini'">Beli Sekarang</button>
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
